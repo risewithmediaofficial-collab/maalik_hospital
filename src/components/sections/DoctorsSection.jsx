@@ -67,7 +67,7 @@ export default function DoctorsSection() {
               >
                 {/* Doctor Portrait Header */}
                 <div
-                  className={`aspect-[1.15/1] relative overflow-hidden ${doctor.fallbackBg}`}
+                  className={`aspect-[4/4.5] relative overflow-hidden ${doctor.fallbackBg}`}
                 >
                   <img
                     src={doctor.image}
