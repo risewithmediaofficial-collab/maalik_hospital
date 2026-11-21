@@ -67,9 +67,12 @@ export function VaarisLogo({ className = '', light = false, size = 'default' }) 
         className={`${imgSize} shrink-0 flex items-center justify-center overflow-hidden transition-transform duration-200 hover:scale-105`}
       >
         <img
-          src="/images/vaaris logo.jpeg"
+          src="/images/vaaris-logo-transparent.png"
           alt="VAARIS Fertility & IVF Centre"
-          className="w-full h-full object-contain block rounded-lg"
+          className="w-full h-full object-contain block"
+          onError={(e) => {
+            e.currentTarget.src = '/images/vaaris logo.jpeg'
+          }}
         />
       </div>
 

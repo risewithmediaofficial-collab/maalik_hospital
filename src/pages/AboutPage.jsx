@@ -80,13 +80,8 @@ export default function AboutPage() {
       <section className="bg-gradient-hero py-12 sm:py-16 md:py-20">
         <Container>
           <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
-            <Badge variant="primary" className="mb-3">
-              <Award className="w-3.5 h-3.5 text-[#007C88]" />
-              <span>About Our Hospital</span>
-            </Badge>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#173C4B] leading-tight text-center">
-              Healthcare Designed Around <br />
-              <span className="text-[#007C88]">Confidence &amp; Comfort</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#007C88] leading-tight text-center">
+              Confidence &amp; Comfort
             </h1>
             <p className="mt-4 text-[#4A6568] text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-justify text-justify-center">
               Malik Life Care Hospital brings together multi-speciality disciplines, advanced diagnostic machinery, 50-bed care capacity, and thoughtfully designed patient spaces in Krishnagiri.
@@ -200,56 +195,57 @@ export default function AboutPage() {
       </section>
 
       {/* VAARIS Fertility & IVF Centre Section */}
-      <section className="py-14 sm:py-20 md:py-24 bg-[#FAF7FA]">
+      <section className="py-14 sm:py-20 md:py-24 bg-white">
         <Container>
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left Column: VAARIS Brand Artwork & Leadership Card (Span 5) */}
-            <div className="lg:col-span-5">
-              <div className="rounded-[32px] bg-white p-6 sm:p-8 flex flex-col items-center text-center">
-                {/* Original VAARIS Logo with NO extra background container */}
-                <img
-                  src="/images/vaaris logo.jpeg"
-                  alt="VAARIS Fertility & IVF Centre"
-                  className="w-28 h-28 sm:w-36 sm:h-36 object-contain mb-3"
-                />
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            {/* Left Column: VAARIS Brand Artwork & Leadership (Span 5) - Borderless on plain bg */}
+            <div className="lg:col-span-5 flex flex-col items-center text-center">
+              {/* Original VAARIS Logo directly on plain background with NO extra background container */}
+              <img
+                src="/images/vaaris-logo-transparent.png"
+                alt="VAARIS Fertility & IVF Centre"
+                className="w-32 h-32 sm:w-44 sm:h-44 object-contain mb-3"
+                onError={(e) => {
+                  e.currentTarget.src = '/images/vaaris logo.jpeg'
+                }}
+              />
 
-                <div className="inline-block bg-[#F5EEF4] text-[#680858] text-xs font-bold px-3.5 py-1 rounded-full mb-2">
-                  Specialised Unit of Malik Life Care Hospital
-                </div>
-
-                <h3 className="text-2xl sm:text-3xl font-black text-[#173C4B]">
-                  VAARIS Fertility &amp; IVF
-                </h3>
-                <p className="text-xs sm:text-sm font-semibold text-[#800060] mt-1">
-                  Centre for Reproductive Medicine &amp; Advanced Maternity
-                </p>
-
-                {/* Lead Doctor Card */}
-                <div className="mt-6 w-full p-4 rounded-2xl bg-[#FAF7FA] flex items-center gap-3 text-left">
-                  <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-white">
-                    <img
-                      src="/images/doctors/dr.thasleem.png"
-                      alt="Dr. Z. Thasleem"
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
-                  <div>
-                    <span className="block text-[0.65rem] font-bold text-[#680858] uppercase tracking-wider">
-                      Clinical Director
-                    </span>
-                    <h4 className="text-sm font-extrabold text-[#173C4B] leading-tight">
-                      Dr. Z. Thasleem
-                    </h4>
-                    <p className="text-[0.7rem] text-[#6B8A8D]">
-                      Obstetrics, Gynaecology &amp; Reproductive Medicine
-                    </p>
-                  </div>
-                </div>
-
-                <p className="mt-4 text-xs text-[#4A6568] leading-relaxed text-justify">
-                  Located within the Malik Life Care Hospital campus on Salem Main Road, Krishnagiri with 24/7 continuous inpatient and NICU support.
-                </p>
+              <div className="inline-block bg-[#F5EEF4] text-[#680858] text-xs font-bold px-3.5 py-1 rounded-full mb-2">
+                Specialised Unit of Malik Life Care Hospital
               </div>
+
+              <h3 className="text-2xl sm:text-3xl font-black text-[#173C4B]">
+                VAARIS Fertility &amp; IVF
+              </h3>
+              <p className="text-xs sm:text-sm font-semibold text-[#800060] mt-1">
+                Centre for Reproductive Medicine &amp; Advanced Maternity
+              </p>
+
+              {/* Lead Doctor - Clean on plain bg with no border */}
+              <div className="mt-6 w-full max-w-sm p-4 rounded-2xl bg-[#FAF7FA] flex items-center gap-3.5 text-left">
+                <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 bg-white">
+                  <img
+                    src="/images/doctors/dr.thasleem.png"
+                    alt="Dr. Z. Thasleem"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div>
+                  <span className="block text-[0.65rem] font-bold text-[#680858] uppercase tracking-wider">
+                    Clinical Director
+                  </span>
+                  <h4 className="text-sm font-extrabold text-[#173C4B] leading-tight">
+                    Dr. Z. Thasleem
+                  </h4>
+                  <p className="text-[0.7rem] text-[#6B8A8D]">
+                    Obstetrics, Gynaecology &amp; Reproductive Medicine
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-4 text-xs text-[#4A6568] leading-relaxed max-w-sm text-justify">
+                Located within the Malik Life Care Hospital campus on Salem Main Road, Krishnagiri with 24/7 continuous inpatient and NICU support.
+              </p>
             </div>
 
             {/* Right Column: Mission, Key Treatments & Why Choose (Span 7) */}
@@ -269,8 +265,8 @@ export default function AboutPage() {
 
               {/* 4 Service Pillars */}
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
-                <div className="p-4 rounded-2xl bg-white">
-                  <div className="w-9 h-9 rounded-xl bg-[#F5EEF4] text-[#680858] flex items-center justify-center font-bold mb-2.5">
+                <div className="p-4 rounded-2xl bg-[#FAF7FA]">
+                  <div className="w-9 h-9 rounded-xl bg-white text-[#680858] flex items-center justify-center font-bold mb-2.5">
                     <Baby className="w-4 h-4" />
                   </div>
                   <h4 className="text-sm font-bold text-[#173C4B]">
@@ -281,8 +277,8 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white">
-                  <div className="w-9 h-9 rounded-xl bg-[#F5EEF4] text-[#680858] flex items-center justify-center font-bold mb-2.5">
+                <div className="p-4 rounded-2xl bg-[#FAF7FA]">
+                  <div className="w-9 h-9 rounded-xl bg-white text-[#680858] flex items-center justify-center font-bold mb-2.5">
                     <Sparkles className="w-4 h-4" />
                   </div>
                   <h4 className="text-sm font-bold text-[#173C4B]">
@@ -293,8 +289,8 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white">
-                  <div className="w-9 h-9 rounded-xl bg-[#F5EEF4] text-[#680858] flex items-center justify-center font-bold mb-2.5">
+                <div className="p-4 rounded-2xl bg-[#FAF7FA]">
+                  <div className="w-9 h-9 rounded-xl bg-white text-[#680858] flex items-center justify-center font-bold mb-2.5">
                     <Microscope className="w-4 h-4" />
                   </div>
                   <h4 className="text-sm font-bold text-[#173C4B]">
@@ -305,8 +301,8 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white">
-                  <div className="w-9 h-9 rounded-xl bg-[#F5EEF4] text-[#680858] flex items-center justify-center font-bold mb-2.5">
+                <div className="p-4 rounded-2xl bg-[#FAF7FA]">
+                  <div className="w-9 h-9 rounded-xl bg-white text-[#680858] flex items-center justify-center font-bold mb-2.5">
                     <ShieldCheck className="w-4 h-4" />
                   </div>
                   <h4 className="text-sm font-bold text-[#173C4B]">
