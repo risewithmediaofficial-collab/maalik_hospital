@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ========================================
+   MALIK LIFE CARE HOSPITAL – Design Tokens
+   ======================================== */
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Primary Brand – Ocean Teal */
+  --color-primary-50: #e6f5f6;
+  --color-primary-100: #b3e1e4;
+  --color-primary-200: #80cdd2;
+  --color-primary-300: #4db9c0;
+  --color-primary-400: #26a9b1;
+  --color-primary-500: #007C88;
+  --color-primary-600: #006d78;
+  --color-primary-700: #07545B;
+  --color-primary-800: #053e43;
+  --color-primary-900: #032a2e;
+
+  /* Secondary Brand – Leaf Green */
+  --color-secondary-50: #edf6f1;
+  --color-secondary-100: #c8e5d5;
+  --color-secondary-200: #a3d4b9;
+  --color-secondary-300: #7ec39d;
+  --color-secondary-400: #64b789;
+  --color-secondary-500: #4B9B75;
+  --color-secondary-600: #3f8563;
+  --color-secondary-700: #336e52;
+
+  /* Accent – Royal Gold */
+  --color-accent-400: #e3c44a;
+  --color-accent-500: #D6B64B;
+  --color-accent-600: #c1a340;
+
+  /* VAARIS – Royal Plum & Deep Magenta */
+  --color-vaaris-50: #fbf0f8;
+  --color-vaaris-100: #f6dff1;
+  --color-vaaris-200: #ebbfe3;
+  --color-vaaris-500: #680858;
+  --color-vaaris-600: #800060;
+  --color-vaaris-700: #540647;
+
+  /* Navy */
+  --color-navy: #173C4B;
+  --color-navy-dark: #0D242D;
+  --color-navy-light: #245266;
+}
+
+/* ========================================
+   Base Styles
+   ======================================== */
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #173C4B;
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #173C4B;
+  }
+
+  a {
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: var(--font-sans);
+  }
+}
+
+/* ========================================
+   Responsive Section Container
+   ======================================== */
+
+.section-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ========================================
+   Gradients & Accents
+   ======================================== */
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, #007C88 0%, #07545B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #680858 0%, #800060 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(175deg, #F0F9F9 0%, #FFFFFF 45%, #FCF8FC 100%);
+}
+
+.bg-gradient-pillars {
+  background: linear-gradient(90deg, #007C88 0%, #07545B 50%, #680858 100%);
+}
+
+/* ========================================
+   Card & Button Effects
+   ======================================== */
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -12px rgba(0, 124, 136, 0.12);
+}
+
+.btn-purple {
+  background-color: #680858;
+  color: #ffffff !important;
+  transition: all 0.2s ease;
+}
+.btn-purple:hover {
+  background-color: #800060;
+  box-shadow: 0 8px 24px -4px rgba(104, 8, 88, 0.35);
+}
+
+.btn-purple-outline {
+  background-color: #ffffff;
+  color: #680858 !important;
+  border: 2px solid #680858;
+  transition: all 0.2s ease;
+}
+.btn-purple-outline:hover {
+  background-color: #FBF0F8;
+  border-color: #800060;
+}
+
+.btn-teal {
+  background-color: #007C88;
+  color: #ffffff !important;
+  transition: all 0.2s ease;
+}
+.btn-teal:hover {
+  background-color: #07545B;
+  box-shadow: 0 8px 24px -4px rgba(0, 124, 136, 0.35);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #B3E1E4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #007C88;
+}
+
+/* ========================================
+   Text Justification & Center Alignment Utilities
+   ======================================== */
+
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.text-justify-center {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: center;
+}
+

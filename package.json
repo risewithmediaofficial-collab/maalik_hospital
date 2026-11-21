@@ -1,0 +1,13 @@
+{
+  "name": "maalik-vaaris-hospital-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build && node -e \"const fs=require('fs'); if(fs.existsSync('frontend/dist')){fs.cpSync('frontend/dist', 'dist', {recursive:true});}\"",
+    "preview": "npm --prefix frontend run preview"
+  }
+}

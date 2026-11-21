@@ -1,0 +1,331 @@
+/* Hospital brand constants and data */
+
+export const HOSPITAL = {
+  name: 'Malik Life Care Hospital',
+  tagline: 'Multispeciality Hospital in Krishnagiri',
+  phone: '9944825586',
+  email: 'care@maliklifecare.com',
+  address: '254, Salem Main Road, Near TCR Circle, Thiruvalluvar Nagar, Krishnagiri, Tamil Nadu – 635001',
+  city: 'Krishnagiri',
+  state: 'Tamil Nadu',
+  pincode: '635001',
+  beds: 50,
+  departments: 11,
+  specialists: '10+',
+  emergency: '24/7',
+  website: 'https://maliklifecarehospital.com',
+  mapUrl: 'https://maps.google.com/?q=Malik+Life+Care+Hospital+Krishnagiri',
+  whatsapp: 'https://wa.me/919944825586',
+}
+
+export const LEADERSHIP = [
+  {
+    name: 'Dr. Ismail Malik',
+    designation: 'Director',
+    speciality: 'Trauma & Joint Replacement',
+    role: 'Specialist Consultant',
+    image: '/images/doctors/dr.malik.png',
+  },
+  {
+    name: 'Dr. Z. Thasleem',
+    designation: 'Co-Director',
+    speciality: 'Obstetrics & Gynaecology',
+    role: 'Specialist Consultant',
+    image: '/images/doctors/dr.thasleem.png',
+  },
+]
+
+export const DEPARTMENTS = [
+  {
+    id: 1,
+    name: 'Orthopaedics',
+    slug: 'orthopaedics',
+    shortDesc: 'Trauma, bone and joint care.',
+    description: 'Comprehensive orthopaedic services including fracture management, joint replacement surgery, sports medicine, spine care, and rehabilitation. Our experienced orthopaedic team delivers precision treatment for musculoskeletal conditions.',
+    icon: 'Bone',
+    image: '/images/departments/orthopaedics.jpg',
+    services: ['Joint Replacement', 'Fracture Management', 'Sports Medicine', 'Spine Care', 'Arthroscopy', 'Physiotherapy'],
+  },
+  {
+    id: 2,
+    name: 'Obstetrics & Gynaecology',
+    slug: 'obstetrics-gynaecology',
+    shortDesc: 'Women\'s health and maternity care.',
+    description: 'Complete women\'s healthcare from prenatal to postnatal care. Expert management of pregnancies, gynaecological conditions, and reproductive health with compassionate and personalised attention.',
+    icon: 'Baby',
+    image: '/images/departments/obgyn.jpg',
+    services: ['Prenatal Care', 'Normal & Caesarean Delivery', 'Gynaecological Surgery', 'Fertility Consultation', 'Postnatal Care', 'Menstrual Health'],
+  },
+  {
+    id: 3,
+    name: 'Paediatrics',
+    slug: 'paediatrics',
+    shortDesc: 'Children\'s healthcare.',
+    description: 'Dedicated paediatric care for newborns, infants, children, and adolescents. Our specialists provide vaccinations, developmental assessments, and treatment for childhood illnesses in a child-friendly environment.',
+    icon: 'Baby',
+    image: '/images/departments/paediatrics.jpg',
+    services: ['Newborn Care', 'Vaccinations', 'Growth Monitoring', 'Childhood Illness', 'Developmental Assessment', 'Adolescent Health'],
+  },
+  {
+    id: 4,
+    name: 'General Medicine',
+    slug: 'general-medicine',
+    shortDesc: 'General medical consultation.',
+    description: 'Primary care and internal medicine services for adults. Diagnosis and management of acute and chronic conditions including diabetes, hypertension, infections, and preventive health screenings.',
+    icon: 'Stethoscope',
+    image: '/images/departments/general-medicine.jpg',
+    services: ['Health Check-ups', 'Diabetes Management', 'Hypertension Care', 'Infectious Disease', 'Preventive Medicine', 'Chronic Disease Management'],
+  },
+  {
+    id: 5,
+    name: 'General Surgery',
+    slug: 'general-surgery',
+    shortDesc: 'Surgical consultation and treatment.',
+    description: 'Expert surgical care for a wide range of conditions. Our skilled surgeons perform both open and minimally invasive procedures with focus on patient safety and quick recovery.',
+    icon: 'Scissors',
+    image: '/images/departments/general-surgery.jpg',
+    services: ['Laparoscopic Surgery', 'Hernia Repair', 'Appendectomy', 'Gallbladder Surgery', 'Wound Management', 'Surgical Consultation'],
+  },
+  {
+    id: 6,
+    name: 'ENT',
+    slug: 'ent',
+    shortDesc: 'Ear, nose and throat care.',
+    description: 'Specialised care for ear, nose, and throat conditions. Treatment for hearing disorders, sinusitis, tonsillitis, voice disorders, and other ENT conditions with modern diagnostic and therapeutic facilities.',
+    icon: 'Ear',
+    image: '/images/departments/ent.jpg',
+    services: ['Hearing Assessment', 'Sinus Treatment', 'Tonsillectomy', 'Voice Disorders', 'Allergy Management', 'ENT Surgery'],
+  },
+  {
+    id: 7,
+    name: 'Radiology',
+    slug: 'radiology',
+    shortDesc: 'Medical imaging and diagnostics.',
+    description: 'Advanced diagnostic imaging services including X-ray, ultrasound, CT scan, and other modalities. Accurate and timely reporting to support clinical decision-making across all departments.',
+    icon: 'ScanLine',
+    image: '/images/departments/radiology.jpg',
+    services: ['X-Ray', 'Ultrasound', 'CT Scan', 'Digital Radiography', 'Doppler Studies', 'Diagnostic Reporting'],
+  },
+  {
+    id: 8,
+    name: 'Urology',
+    slug: 'urology',
+    shortDesc: 'Urinary system healthcare.',
+    description: 'Expert diagnosis and treatment of urinary tract conditions and male reproductive health. Services include kidney stone management, prostate care, and minimally invasive urological procedures.',
+    icon: 'Activity',
+    image: '/images/departments/urology.jpg',
+    services: ['Kidney Stone Treatment', 'Prostate Care', 'Urinary Tract Infections', 'Urological Surgery', 'Bladder Health', 'Male Reproductive Health'],
+  },
+  {
+    id: 9,
+    name: 'Gastroenterology',
+    slug: 'gastroenterology',
+    shortDesc: 'Digestive system healthcare.',
+    description: 'Comprehensive care for digestive and liver disorders. Expert management of conditions affecting the oesophagus, stomach, intestines, liver, and pancreas with advanced diagnostic and therapeutic procedures.',
+    icon: 'Pill',
+    image: '/images/departments/gastroenterology.jpg',
+    services: ['Endoscopy', 'Liver Disease', 'Acid Reflux Treatment', 'IBS Management', 'Colonoscopy', 'Digestive Health'],
+  },
+  {
+    id: 10,
+    name: 'Pulmonology',
+    slug: 'pulmonology',
+    shortDesc: 'Respiratory and lung care.',
+    description: 'Specialised respiratory care for asthma, COPD, pneumonia, tuberculosis, and other lung conditions. Pulmonary function testing, sleep studies, and advanced respiratory therapy available.',
+    icon: 'Wind',
+    image: '/images/departments/pulmonology.jpg',
+    services: ['Asthma Management', 'COPD Care', 'Pulmonary Function Tests', 'Respiratory Therapy', 'Sleep Studies', 'TB Treatment'],
+  },
+  {
+    id: 11,
+    name: 'Cardiology',
+    slug: 'cardiology',
+    shortDesc: 'Heart and cardiovascular care.',
+    description: 'Expert heart care with advanced cardiac diagnostics and treatment. Management of heart disease, hypertension, arrhythmias, and preventive cardiology with experienced cardiac specialists.',
+    icon: 'HeartPulse',
+    image: '/images/departments/cardiology.jpg',
+    services: ['ECG', 'Echocardiography', 'Heart Disease Management', 'Hypertension Treatment', 'Cardiac Rehabilitation', 'Preventive Cardiology'],
+  },
+]
+
+export const TESTIMONIALS = [
+  {
+    id: 1,
+    name: 'Mrs. Priya R.',
+    location: 'Krishnagiri',
+    text: 'I had severe knee pain and was worried about surgery. Dr. Ismail Malik gave me a personalized non-surgical treatment plan. Within weeks, I was walking comfortably again. Truly grateful for the care.',
+    rating: 5,
+    doctor: 'Dr. Ismail Malik',
+  },
+  {
+    id: 2,
+    name: 'Mr. Mohammed Asif',
+    location: 'Vellore',
+    text: 'Dr. Z. Thasleem took exceptional care during my wife\'s pregnancy. The monitoring was thorough and the communication was clear at every stage. We felt safe and supported throughout.',
+    rating: 5,
+    doctor: 'Dr. Z. Thasleem',
+  },
+  {
+    id: 3,
+    name: 'Mrs. Lakshmi Devi',
+    location: 'Salem',
+    text: 'After a shoulder injury, the physiotherapy and medication plan helped me recover fully. The staff was caring and always available to answer my questions.',
+    rating: 5,
+    doctor: null,
+  },
+  {
+    id: 4,
+    name: 'Mr. Abdul Kareem',
+    location: 'Madurai',
+    text: 'The maternity care here is outstanding. Dr. Z. Thasleem explained everything clearly, and the team made sure my wife was comfortable and well cared for throughout.',
+    rating: 5,
+    doctor: 'Dr. Z. Thasleem',
+  },
+  {
+    id: 5,
+    name: 'Mr. Santhosh Kumar',
+    location: 'Dharmapuri',
+    text: 'I was treated for an orthopaedic injury after an accident. The treatment was prompt and professional. The recovery support was excellent.',
+    rating: 5,
+    doctor: null,
+  },
+  {
+    id: 6,
+    name: 'Mrs. Nisha Begum',
+    location: 'Hosur',
+    text: 'My maternity journey here was wonderful. Regular follow-ups, caring staff, and a clean facility made all the difference. I would recommend this hospital to any expectant mother.',
+    rating: 5,
+    doctor: null,
+  },
+  {
+    id: 7,
+    name: 'Mr. Ramesh Babu',
+    location: 'Bengaluru',
+    text: 'What impressed me most was the cleanliness and the supportive staff. Everyone from reception to nursing was professional and genuinely caring.',
+    rating: 5,
+    doctor: null,
+  },
+  {
+    id: 8,
+    name: 'Mrs. Yasmeen F.',
+    location: 'Chennai',
+    text: 'From admission to discharge, everything was organized and smooth. The treatment process was transparent and I always knew what to expect next.',
+    rating: 5,
+    doctor: null,
+  },
+]
+
+export const FACILITIES = [
+  {
+    name: 'Hospital Building & Exterior',
+    image: '/images/facilities/hospital-exterior.jpg',
+    category: 'Premises',
+    desc: 'Modern multi-storey facility housing Malik Life Care & VAARIS Fertility',
+  },
+  {
+    name: 'Main Reception & Helpdesk',
+    image: '/images/facilities/hospital-reception.jpg',
+    category: 'Patient Services',
+    desc: '24/7 patient enquiry counter, reception lobby, and brand wall',
+  },
+  {
+    name: 'Inpatient Corridor & Lift Lobby',
+    image: '/images/facilities/hospital-interior.jpg',
+    category: 'Clinical Wings',
+    desc: 'Spacious patient waiting area and elevator access to wards',
+  },
+  {
+    name: 'Operation Theatre Complex',
+    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=700&q=80',
+    category: 'Surgical Care',
+    desc: 'Laminar airflow surgical suites and laparoscopic infrastructure',
+  },
+  {
+    name: 'Neonatal ICU (NICU)',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=700&q=80',
+    category: 'Paediatrics',
+    desc: 'Specialized newborn resuscitation warmers and phototherapy units',
+  },
+  {
+    name: 'Private Deluxe Patient Rooms',
+    image: 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=700&q=80',
+    category: 'Inpatient Care',
+    desc: 'Air-conditioned rooms with attendant couches and nurse call systems',
+  },
+  {
+    name: '50-Bed General Wards',
+    image: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=700&q=80',
+    category: 'Inpatient Care',
+    desc: 'Hygienic 50-bed inpatient capacity with round-the-clock nursing care',
+  },
+  {
+    name: 'Digital Diagnostic Imaging',
+    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=700&q=80',
+    category: 'Diagnostics',
+    desc: 'Low-dose digital X-ray and computerized pathology diagnostics',
+  },
+]
+
+export const NAV_LINKS = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/about' },
+  { label: 'Departments', path: '/departments' },
+  { label: 'Doctors', path: '/doctors' },
+  { label: 'Facilities', path: '/facilities' },
+  { label: 'Lab & Diagnostics', path: '/lab-diagnostics' },
+  { label: 'Blog', path: '/blog' },
+  { label: 'Gallery', path: '/gallery' },
+  { label: 'Contact', path: '/contact' },
+]
+
+export const QUICK_ACTIONS = [
+  { label: 'Find a Doctor', icon: 'UserSearch', path: '/doctors' },
+  { label: 'Book Lab Test', icon: 'FlaskConical', path: '/lab-diagnostics' },
+  { label: 'Our Facilities', icon: 'Building2', path: '/facilities' },
+  { label: 'Hospital Location', icon: 'MapPin', path: '/contact' },
+]
+
+export const BLOG_POSTS = [
+  {
+    id: 1,
+    title: 'Preparing for Your First Hospital Appointment',
+    slug: 'preparing-for-first-appointment',
+    excerpt: 'A patient-friendly checklist covering medical documents, current medications, symptom notes, and questions to ask your doctor.',
+    date: '2024-12-01',
+    readTime: '4 min read',
+    image: '/images/blog/appointment-prep.jpg',
+    category: 'Patient Guide',
+  },
+  {
+    id: 2,
+    title: 'When to Book a Lab Test',
+    slug: 'when-to-book-lab-test',
+    excerpt: 'Understanding routine diagnostics, doctor-advised tests, and preparation instructions for common laboratory examinations.',
+    date: '2024-11-15',
+    readTime: '3 min read',
+    image: '/images/blog/lab-test.jpg',
+    category: 'Health Tips',
+  },
+]
+
+export const CARE_PATHWAY = [
+  { step: 1, title: 'Consultation', description: 'Meet with our specialist for initial assessment.' },
+  { step: 2, title: 'Diagnosis', description: 'Advanced diagnostics for accurate identification.' },
+  { step: 3, title: 'Treatment Planning', description: 'Personalised care plan designed for you.' },
+  { step: 4, title: 'Follow-up Support', description: 'Continuous monitoring and recovery guidance.' },
+  { step: 5, title: 'Patient Communication', description: 'Clear updates at every stage of care.' },
+]
+
+export const CORE_VALUES = [
+  { title: 'Patient-First Approach', icon: 'Heart', description: 'Every decision begins with the patient.' },
+  { title: 'Advanced Technology', icon: 'Cpu', description: 'Modern equipment and treatment pathways.' },
+  { title: 'Compassionate Care', icon: 'HandHeart', description: 'Warmth and empathy in every interaction.' },
+  { title: 'Ethical & Transparent', icon: 'Shield', description: 'Honest communication and clear processes.' },
+]
+
+export const STATS = [
+  { value: '50', suffix: '', label: 'Bed Capacity' },
+  { value: '11', suffix: '', label: 'Specialities' },
+  { value: '10', suffix: '+', label: 'Specialists' },
+  { value: '24/7', suffix: '', label: 'Emergency' },
+]
