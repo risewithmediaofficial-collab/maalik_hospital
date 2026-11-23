@@ -14,12 +14,12 @@ export default function FloatingActions() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2.5 items-end">
+    <div className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2 sm:gap-2.5 items-end">
       {/* Scroll to Top */}
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="w-10 h-10 rounded-full bg-[#173C4B]/90 text-white flex items-center justify-center shadow-md hover:bg-[#173C4B] transition-all backdrop-blur-sm hover:scale-105 active:scale-95"
+          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#173C4B]/90 text-white flex items-center justify-center shadow-md hover:bg-[#173C4B] transition-all backdrop-blur-sm hover:scale-105 active:scale-95"
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-4 h-4" />
@@ -31,7 +31,7 @@ export default function FloatingActions() {
         href={HOSPITAL.whatsapp}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
+        className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
         aria-label="Chat with hospital on WhatsApp"
       >
         <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 fill-white" />
@@ -44,7 +44,7 @@ export default function FloatingActions() {
       {/* Direct Emergency Call */}
       <a
         href={`tel:${HOSPITAL.phone}`}
-        className="group relative w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
+        className="group relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
         aria-label={`Emergency phone call to ${HOSPITAL.phone}`}
       >
         <Phone className="w-5 h-5 sm:w-6 sm:h-6 fill-white animate-pulse" />

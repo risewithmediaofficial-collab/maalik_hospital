@@ -14,34 +14,8 @@ export default function LocationSection() {
             isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          {/* Map Preview Container (Span 6 on desktop) */}
-          <div className="lg:col-span-6 rounded-3xl overflow-hidden bg-gradient-to-tr from-teal-50 to-slate-100 border-4 border-white shadow-xl aspect-[4/3] relative flex items-center justify-center p-6 text-center">
-            {/* Map Pin Mockup with Real Google Maps Redirection */}
-            <div className="max-w-md">
-              <div className="w-16 h-16 rounded-full bg-[#E6F5F6] text-[#007C88] flex items-center justify-center mx-auto mb-4 shadow-sm animate-bounce">
-                <MapPin className="w-8 h-8" />
-              </div>
-              <h3 className="text-xl font-extrabold text-[#173C4B] mb-2">
-                Malik Life Care Hospital
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4A6568] mb-5 leading-relaxed">
-                254, Salem Main Road, Near TCR Circle, Thiruvalluvar Nagar,
-                Krishnagiri, Tamil Nadu – 635001
-              </p>
-              <a
-                href={HOSPITAL.mapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-teal inline-flex items-center gap-2 text-xs sm:text-sm font-bold px-6 py-3 rounded-full shadow-md hover:shadow-lg active:scale-95"
-              >
-                <span>Open in Google Maps</span>
-                <ExternalLink className="w-4 h-4 text-white" />
-              </a>
-            </div>
-          </div>
-
-          {/* Contact & Hours Info (Span 6 on desktop) */}
-          <div className="lg:col-span-6 text-left">
+          {/* Contact & Hours Info (Order 1 on mobile, Order 1 on desktop) */}
+          <div className="order-1 lg:order-1 lg:col-span-6 text-left">
             <Badge variant="primary" className="mb-3">
               <MapPin className="w-3.5 h-3.5 text-[#007C88]" />
               <span>Hospital Location</span>
@@ -52,7 +26,7 @@ export default function LocationSection() {
               <span className="text-[#007C88]">Always Here for You</span>
             </h2>
 
-            <p className="mt-3 text-[#4A6568] text-sm sm:text-base leading-relaxed">
+            <p className="mt-3 text-[#4A6568] text-sm sm:text-base leading-relaxed max-w-xl pr-12 sm:pr-0">
               Centrally located on Salem Main Road, Krishnagiri with 24/7 dedicated ambulance access and spacious parking.
             </p>
 
@@ -104,6 +78,32 @@ export default function LocationSection() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Map Preview Container (Order 2 on mobile, Order 2 on desktop) */}
+          <div className="order-2 lg:order-2 lg:col-span-6 rounded-3xl overflow-hidden bg-gradient-to-tr from-teal-50 to-slate-100 border-4 border-white shadow-xl min-h-[330px] sm:min-h-0 sm:aspect-[4/3] relative flex items-center justify-center p-6 sm:p-8 text-center">
+            {/* Map Pin Mockup with Real Google Maps Redirection */}
+            <div className="max-w-md w-full flex flex-col items-center">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#E6F5F6] text-[#007C88] flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-sm animate-bounce">
+                <MapPin className="w-7 h-7 sm:w-8 sm:h-8" />
+              </div>
+              <h3 className="text-lg sm:text-xl font-extrabold text-[#173C4B] mb-2">
+                Malik Life Care Hospital
+              </h3>
+              <p className="text-xs sm:text-sm text-[#4A6568] mb-5 leading-relaxed max-w-xs sm:max-w-md mx-auto">
+                254, Salem Main Road, Near TCR Circle, Thiruvalluvar Nagar,
+                Krishnagiri, Tamil Nadu – 635001
+              </p>
+              <a
+                href={HOSPITAL.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-teal inline-flex items-center gap-2 text-xs sm:text-sm font-bold px-6 py-3 rounded-full shadow-md hover:shadow-lg active:scale-95 transition-all"
+              >
+                <span>Open in Google Maps</span>
+                <ExternalLink className="w-4 h-4 text-white" />
+              </a>
             </div>
           </div>
         </div>
